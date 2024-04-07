@@ -8,7 +8,7 @@ const loginFormSchema = z.object({
   email: z
     .string()
     .email('Formato de e-mail inválido.')
-    .refine(value => value === 'puc@aluno.com', {
+    .refine(value => value === 'pucpr@aluno.com', {
       message: 'E-mail incorreto.'
     }),
   password: z.coerce.string()
