@@ -1,14 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Layout } from './layout'
+import { FormComponent } from './components/form-component'
 
 export function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route path='/' element={<Layout />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="flex align-center justify-center h-screen w-screen bg-gray-400">
+      <FormComponent />
+    </div>
   )
 }
