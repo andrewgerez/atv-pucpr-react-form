@@ -1,6 +1,14 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Layout } from './routes'
+
 export function App() {
   return (
-    <div className="flex align-center h-screen w-screen bg-indigo-950">
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='/' element={<Layout />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
