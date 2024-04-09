@@ -55,8 +55,6 @@ export function FormComponent() {
                       placeholder='email'
                       {...register('email')}
                     />
-
-                    {errors.email?.message && <p className='text-red-500'>{errors.email?.message}</p>}
                   </div>
 
                   <div className='relative'>
@@ -70,9 +68,9 @@ export function FormComponent() {
                       placeholder='password'
                       {...register('password')}
                     />
-
-                    {errors.password?.message && <p className='text-red-500'>{errors.password?.message}</p>}
                   </div>
+                  
+                  {(errors.email || errors.password) && <p className='text-red-500'>Usuário ou senha incorretos!</p>}
                   <div className='relative'>
                     <button type='submit' className='bg-red-500 text-white rounded-md px-2 py-1'>
                       Acessar
